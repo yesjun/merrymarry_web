@@ -15,7 +15,7 @@ class Secure extends CI_Controller {
 			$this->session->set_userdata(array('access_token' => $result['access_token']));
 		} else {
 			$this->session->set_userdata(array('access_token' => FALSE));
-		}				$this->load->library('awslib');		$sqs = new AmazonSQS();		$response = $sqs->list_queues();		//var_dump($response->isOK());		$data['awsobj'] = $response;
+		}				$this->load->library('awslib');		$sqs = new AmazonSQS();		$response = $sqs->list_queues();		//var_dump($response->isOK());		$data['awsobj'] = $response;				$array_data = array('datas'=>array('reqName'=>'RefreshSession'), 				'reqData'=>array('data'=>'none'));		$json_data = json_encode($array_data);		$res_data = $this->curl->simple_post("http://api.merrymarry.me/TransactionProvider.aspx",				$json_data);		$data['mmares'] = $res_data;
 	
 		$data['page'] = 'secure_view';
 		$this->load->view('template', $data);

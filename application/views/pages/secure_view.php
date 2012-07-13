@@ -17,7 +17,7 @@
 	<p>Modeled after https://graph.facebook.com/ID/CONNECTION_TYPE</p>
 	<p>See https://developers.facebook.com/docs/reference/api/</p>
 	<p>$object can be modeled after the following CONNECTION_TYPE's: likes, home, feed, movies, music, books, notes, permissions, photos, albums, videos, uploaded, events, groups, checkins, locations, etc.</p>
-</div><div id=examples>	<h2>AmazonSQS Data</h2>	<pre>		<?php print_r($awsobj); ?>	</pre></div>
+</div><div id=examples>	<h2>AmazonSQS Data</h2>	<pre>		<?php print_r($awsobj); ?>	</pre></div><div id=examples>	<h2>MerryMerry API Response</h2>	<pre>		<?php print_r($mmares); ?>	</pre></div>
 
 <div class=logout_box>
 	<?php echo anchor('chupacabra/logout', 'Logout'); ?>
