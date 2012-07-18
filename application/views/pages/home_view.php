@@ -1,6 +1,6 @@
 <?php echo anchor($this->facebook->getLoginURL($this->config->item('facebook_login_parameters')), 'Connect with Facebook', 'id=connect_button class=bambambam'); ?>
 
-<h3>Connecting to this demo-app will not post to your wall or do anything else that's annoying like sharing or stealing your personal information</h3>
+<h3>Connecting to this demo-app will not post to your wall or do anything else that's annoying like sharing or stealing your personal information</h3><?php echo anchor('card', 'Call MerryMarry API'); ?><h3>MerryMarry API</h3>
 
 <p>License</p>
 <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
