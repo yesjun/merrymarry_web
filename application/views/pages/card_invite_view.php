@@ -59,46 +59,42 @@
 					<!-- div.likes 끝 -->
 				</div>
 				<div class="content">
-					<div class="date"><?php echo mdate('%M %d%S, %Y, %h:%i %A', strtotime($invite_data->weddingEvent->when)); ?> <?php echo $invite_loc_data['add']; ?></div>
+					<div class="box">
+						<div class="map">
+						</div>
+					</div>
 					<div class="box">
 						<div class="img_box" id="PHOTO">
-							<div class="multi_img">
-								<a href="#" class="prev"></a><a href="#" class="next"></a>
-								<div class="dim">
-									<!-- dim -->
+							<!-- div class="multi_img" -->
+								<!-- a href="#" class="prev"></a><a href="#" class="next"></a -->
+								<!-- div class="dim">
+									<!-- dim -- >
 									<ol class="dim">
 										<li class="on"></li>
 										<li></li>
 										<li></li>
 									</ol>
-								</div>
-								<div class="grad"></div>
-							</div>
+								</div -->
+								<!-- div class="grad"></div -->
+							<!-- /div -->
 							<!-- div.multi_img 끝 -->
-							<a href="#" class="zoom"></a>
+							<!-- a href="#" class="zoom"></a -->
 							<ol class="img">
 								<li class=""><img
 									src="<?php echo $invite_data->weddingEvent->coverPhotoURI; ?>"
-									xsrc="http://d2scgnwnhl18tn.cloudfront.net/100002541610868%26100003722877610/cover/DD7235A7-001B-4382-B1B3-408F61283E52-43095-00034A06BB67EFF6.png"
-									width="500" alt="Travelog - Hojin Lee's Log at Paris, France" />
-								</li>
-								<li class="hidden"><img
-									src="http://d2scgnwnhl18tn.cloudfront.net/100002541610868%26100003722877610/cover/281F2575-A4CE-4BB0-958F-D6ABF9E63239-41162-00034319558DC5C2.png"
-									xsrc="http://d2scgnwnhl18tn.cloudfront.net/100002541610868%26100003722877610/cover/281F2575-A4CE-4BB0-958F-D6ABF9E63239-41162-00034319558DC5C2.png"
-									width="500" alt="Travelog - Hojin Lee's Log at Paris, France" />
-								</li>
-								<li class="hidden"><img
-									src="http://d2scgnwnhl18tn.cloudfront.net/100002541610868%26100003722877610/cover/281F2575-A4CE-4BB0-958F-D6ABF9E63239-41162-00034319558DC5C2.png"
-									xsrc="http://d2scgnwnhl18tn.cloudfront.net/100002541610868%26100003722877610/cover/281F2575-A4CE-4BB0-958F-D6ABF9E63239-41162-00034319558DC5C2.png"
-									width="500" alt="Travelog - Hojin Lee's Log at Paris, France" />
+									xsrc="<?php echo $invite_data->weddingEvent->coverPhotoURI; ?>"
+									width="560" alt="Travelog - Hojin Lee's Log at Paris, France" />
 								</li>
 							</ol>
 						</div>
 						<!-- div.img_box 끝 -->
 						<div class="txt_box">
-							<p class="desc"><?php echo $invite_loc_data['add']; ?>!!</p>
+							<p class="desc"><?php echo mdate('%M %d%S, %Y, %h:%i %A', strtotime($invite_data->weddingEvent->when)); ?></p>
 						</div>
 						<!-- div.txt_box 끝 -->
+					</div>
+					<!-- map -->
+					<div class="box">
 						<div class="map">
 							<div class="pin_bg"></div>
 							<div class="info">
@@ -113,10 +109,11 @@
 								</h2>
 							</div>
 							<img
-								src="http://maps.google.com/maps/api/staticmap?center=<?php echo $invite_loc_data['add']; ?>,<?php echo $invite_loc_data['add']; ?>&zoom=16&size=500x100&sensor=false&language=en"
+								src="http://maps.google.com/maps/api/staticmap?center=<?php echo $invite_loc_data['add']; ?>,<?php echo $invite_loc_data['add']; ?>&zoom=16&size=560x100&sensor=false&language=en"
 								class="map" />
 						</div>
 					</div>
+					<!-- /map -->
 				</div>
 			</div>
 		</div>

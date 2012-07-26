@@ -64,11 +64,11 @@ div.wrap2 {
 }
 
 div.container {
-    margin: 50px auto;
+    margin: 0px auto;
     width: 860px;
     position: relative;
     overflow: hidden;
-    padding: 10px 0 20px 0;
+    padding: 0px 0 20px 0;
 }
 
 div.me {
@@ -372,7 +372,7 @@ div.love div.likes a:active img {
 
 
 div.content {
-    width:500px;
+    width:560px;
     margin: 0 auto;
 }
 
@@ -405,15 +405,17 @@ div.private img {
 
 div.box {
     float: left;
-    background: #fff;
-    width: 500px;
+    background: none;
+    width: 560px;
     border-radius: 15px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
     position: relative;
 }
 
 div.box div.txt_box {
-    padding-top: 20px;
+	position: absolute;
+	top: 539px;
+    /*padding-top: 20px;*/
 }
 
 div.box div.dim {
@@ -446,7 +448,7 @@ div.box div.dim ol li.on {
 
 div.img_box a {
     width: 150px;
-    height: 500px;
+    height: 560px;
     -webkit-transition: all .15s ease;
 }
 
@@ -518,15 +520,15 @@ div.box div.grad {
 
 div.box ol.img {
     position: relative;
-    height: 500px;
+    height: 560px;
     background: #000;
-    border-radius: 15px 15px 0 0;
+    border-radius: 15px 15px 15px 15px;
     list-style: none;
 }
 
 div.box ol.img img {
     position: relative;
-    border-radius: 14px 14px 0 0;
+    border-radius: 14px 14px 14px 14px;
 }
 
 div.box span.place {
@@ -553,6 +555,8 @@ div.box p.desc {
     font-size: 16px;
     line-height: 1.3em;
     color: #666;
+    width: 560px;
+    text-align: center;
 }
 div.box p.desc a {
     color: #000;
@@ -560,7 +564,7 @@ div.box p.desc a {
 
 div.box div.map {
     float: left;
-    width: 500px;
+    width: 560px;
     height: 100px;
     position: relative;
 
@@ -570,10 +574,10 @@ div.box div.map div.inset {
     float: left;
     position: absolute;
     z-index: 2;
-    border-radius: 0 0 15px 15px;
+    border-radius: 15px 15px 15px 15px;
     box-shadow: inset 0 0 10px rgba(255,255,255,1);
     background: url(/images/inset_ie.png) no-repeat;
-    width: 500px;
+    width: 560px;
     height: 100px;
     text-align: center;
 }
@@ -610,7 +614,7 @@ div.box div.map div.pin_bg {
     width: 29px;
     position: absolute;
     z-index: 4;
-    left:235px;
+    left:265px;
     top:31px;
     -webkit-animation: pulsate 1s ease-out;
     -moz-animation: pulsate 1s ease-out;
@@ -629,7 +633,7 @@ div.box div.map div.pin_bg {
 
 div.box div.map div.info {
     position: absolute;
-    width: 500px;
+    width: 560px;
     clear: both;
     z-index: 5;
     margin: 0 auto;
@@ -648,7 +652,7 @@ div.box div.map a.location img {
 div.box div.map img.map {
     position: absolute;
     z-index: 1;
-    border-radius: 0 0 15px 15px;
+    border-radius: 15px 15px 15px 15px;
     box-shadow: rgba(0,0,0,0.5) 0 0 80px inset;
 }
 
