@@ -1,66 +1,37 @@
 <img id="BG_BLUR" class="hidden" src="" />
 <div id="BG_BLUR_FAKE"></div>
 <div class="base_wrap">
-	<div class="header">
-		<a href="/" class="logo"><img src="<?php echo base_url(); ?>assets/images/logo_white.png" alt="" />
-		</a>
-		<h1>
-			<a href="/randy" class="text" title="Hojin Lee's Travelog"><span>Hojin
-					Lee</span>'s Log at Paris, France</a>
-		</h1>
-	</div>
-	<div class="sign">
-		<a href="http://itunes.apple.com/us/app/travelog/id521918510?mt=8"
-			target="_blank">Get the App</a> <a href="/a/auth">Sign In</a>
-	</div>
 	<div class="pic_full" id="PHOTO_ZOOM" style="display: none">
 		<div class="img"></div>
 	</div>
 	<div class="wrap">
 		<div class="wrap2">
 			<div class="container">
-				<!-- 썸네일 및 작성자 이름 -->
-				<div class="me" style="left: 725px;">
-					<h2>
-						<a href="http://www.facebook.com/<?php echo $invite_data->weddingEvent->host2->host; ?>"
-							style="background-image: url(<?php echo $invite_data->weddingEvent->host2->photoData; ?>);"
-							target="_blank" title="<?php echo $invite_data->weddingEvent->host2->name; ?>"> <span class="tooltip"><?php echo $invite_data->weddingEvent->host2->name; ?></span>
-						</a>
-					</h2>
-				</div>
-				<div class="me">
-					<h2>
-						<a href="http://www.facebook.com/<?php echo $invite_data->weddingEvent->host1->host; ?>"
-							style="background-image: url(<?php echo $invite_data->weddingEvent->host1->photoData; ?>);"
-							target="_blank" title="<?php echo $invite_data->weddingEvent->host1->name; ?>"> <span class="tooltip"><?php echo $invite_data->weddingEvent->host1->name; ?></span>
-						</a>
-					</h2>
-				</div>
-				<!-- 좋아요 버튼 및 목록 -->
-				<div class="love" id="LIKE">
-					<a class="love login" href="#"><span class="tooltip"></span><span
-						class="icon"></span> </a>
-					<div class="likes">
-						<span class="count">3</span>
-						<div class="ulcon">
-							<ul>
-								<li class="1004"><a href="/noff" rel="Robinson&nbsp;Park"><img
-										src="<?php echo $invite_data->weddingEvent->host2->photoData; ?>" />
-								</a></li>
-								<li class="1008"><a href="/kyokyo" rel="Lina&nbsp;Park"><img
-										src="http://s3.amazonaws.com/profiles.travelog.me/2012/05/09/c2449804aa6fafed32c649b2c6c47785.jpg_small" />
-								</a></li>
-								<li class="1015"><a href="/sven" rel="Sven&nbsp;Jansen"><img
-										src="http://s3.amazonaws.com/profiles.travelog.me/2012/05/10/779ad178690c521253db82027c3c74cd.jpg_small" />
-								</a></li>
-							</ul>
-						</div>
-					</div>
-					<!-- div.likes 끝 -->
-				</div>
 				<div class="content">
-					<div class="box">
-						<div class="map">
+					<div class="top_link">
+						<img src="<?php echo base_url(); ?>assets/images/top_link/card_toplink_bg.png" class="link_bg" />
+						<p><a href="" class="apple_bu"><img src="<?php echo base_url(); ?>assets/images/top_link/apple_bu.png" width="224" /></a></p>
+						<p><a href="" class="play_bu"><img src="<?php echo base_url(); ?>assets/images/top_link/play_bu.png" width="224" /></a></p>
+					</div>
+					<div class="profile">
+						<img src="<?php echo base_url(); ?>assets/images/profile/profile_bg.png" class="profile_bg" />
+						<div class="host1">
+							<h2>
+								<a href="http://www.facebook.com/<?php echo $invite_data->weddingEvent->host1->host; ?>"
+									style="background-image: url(<?php echo $invite_data->weddingEvent->host1->photoData; ?>);"
+									target="_blank" title="<?php echo $invite_data->weddingEvent->host1->name; ?>"> 
+								</a>
+								<span class="tooltip"><?php echo $invite_data->weddingEvent->host1->name; ?></span>
+							</h2>
+						</div>
+						<div class="host2">
+							<h2>
+								<a href="http://www.facebook.com/<?php echo $invite_data->weddingEvent->host2->host; ?>"
+									style="background-image: url(<?php echo $invite_data->weddingEvent->host2->photoData; ?>);"
+									target="mm_facebook" title="<?php echo $invite_data->weddingEvent->host2->name; ?>"> 
+								</a>
+								<span class="tooltip"><?php echo $invite_data->weddingEvent->host2->name; ?></span>
+							</h2>
 						</div>
 					</div>
 					<div class="box">
@@ -80,7 +51,7 @@
 							<!-- div.multi_img 끝 -->
 							<!-- a href="#" class="zoom"></a -->
 							<ol class="img">
-								<li class=""><img
+								<li><img
 									src="<?php echo $invite_data->weddingEvent->coverPhotoURI; ?>"
 									xsrc="<?php echo $invite_data->weddingEvent->coverPhotoURI; ?>"
 									width="560" alt="Travelog - Hojin Lee's Log at Paris, France" />
@@ -88,32 +59,41 @@
 							</ol>
 						</div>
 						<!-- div.img_box 끝 -->
+						<div class="txt_box_bg"><img src="<?php echo base_url(); ?>assets/images/card_photo/card_photo_bg_02.png" width="560" /></div>
 						<div class="txt_box">
 							<p class="desc"><?php echo mdate('%M %d%S, %Y, %h:%i %A', strtotime($invite_data->weddingEvent->when)); ?></p>
 						</div>
 						<!-- div.txt_box 끝 -->
 					</div>
+					<div class="rsvp">
+						<img src="<?php echo base_url(); ?>assets/images/rsvp/rsvp_bg.png" />
+						<p><a href="" class="yes_bu"><img src="<?php echo base_url(); ?>assets/images/rsvp/yes_bu.png" /></a></p>
+						<p><a href="" class="no_bu"><img src="<?php echo base_url(); ?>assets/images/rsvp/no_bu.png" /></a></p>
+					</div>
 					<!-- map -->
-					<div class="box">
-						<div class="map">
-							<div class="pin_bg"></div>
-							<div class="info">
-								<img src="<?php echo base_url(); ?>assets/images/pin.png" class="pin" />
-							</div>
-							<div class="inset">
-								<h2>
-									<a class="location"
-										href="http://maps.google.com/maps?z=15ll=&<?php echo $invite_loc_data['lat']; ?>,<?php echo $invite_loc_data['lon']; ?>&q=<?php echo $invite_loc_data['lat']; ?>,<?php echo $invite_loc_data['lon']; ?>"
-										target="_blank" title="Paris, France"><img
-										src="<?php echo base_url(); ?>assets/images/flag/s/fr.png" /> <?php echo $invite_loc_data['add']; ?></a>
-								</h2>
-							</div>
-							<img
-								src="http://maps.google.com/maps/api/staticmap?center=<?php echo $invite_loc_data['add']; ?>,<?php echo $invite_loc_data['add']; ?>&zoom=16&size=560x100&sensor=false&language=en"
-								class="map" />
+					<div class="map_box">
+						<div class="pin_bg"></div>
+						<div class="info">
+							<img src="<?php echo base_url(); ?>assets/images/map/map_bg.png" class="pin" />
 						</div>
+						<div class="inset">
+							<h2>
+								<a class="location"
+									href="http://maps.google.com/maps?z=15ll=&<?php echo $invite_loc_data['lat']; ?>,<?php echo $invite_loc_data['lon']; ?>&q=<?php echo $invite_loc_data['lat']; ?>,<?php echo $invite_loc_data['lon']; ?>"
+									target="_blank" title="<?php echo $invite_loc_data['add']; ?>"><?php echo $invite_loc_data['add']; ?></a>
+							</h2>
+						</div>
+						<img
+							src="http://maps.google.com/maps/api/staticmap?center=<?php echo $invite_loc_data['lat']; ?>,<?php echo $invite_loc_data['lon']; ?>&zoom=16&size=560x233&sensor=false&language=en"
+							class="map" />
 					</div>
 					<!-- /map -->
+					<div class="gift_box">
+						<img src="<?php echo base_url(); ?>assets/images/gift/gift_bg.png" class="gift_box_bg" />
+						<?php for($gift_count = 0; $gift_count < count($gift_data); $gift_count++): $gift = $gift_data[$gift_count]; ?>
+							<div style="left: <?php echo $gift_count*190 + 36; ?>px;"><a href="<?php echo $gift->storeURL; ?>" class="gift_item" target="mm_store"><img src="<?php echo $gift->photoURI; ?>" /></a><div><?php echo $gift->title; ?></div></div>
+						<?php endfor; ?>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -128,30 +108,3 @@
 	});
 </script>
 <!-- End Dynamic JavaScript -->
-<div class="sns">
-	<div class="facebook">
-		<div id="fb-root"></div>
-		<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
-		<div class="fb-like" data-href="http://travelog.me/randy/log/184"
-			data-send="false" data-layout="button_count" data-show-faces="false"
-			data-font="arial" data-width="95"></div>
-	</div>
-	<div class="twitter">
-		<a href="https://twitter.com/share" class="twitter-share-button"
-			data-lang="en" data-url="http://travelog.me/randy/log/184">Tweet</a>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-	</div>
-	<div class="pinterest">
-		<a
-			href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Ftravelog.me%2Frandy%2Flog%2F184&media=http%3A%2F%2Fs3.amazonaws.com%2Fphotos.travelog.me%2F2012%2F05%2F12%2F2a06c9a741daa7081f40a209b8e672e9.jpg_large"
-			class="pin-it-button" count-layout="horizontal"><img border="0"
-			src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /> </a>
-	</div>
-	<div class="googleplus">
-		<g:plusone size="medium"></g:plusone>
-		<script type="text/javascript"> (function() { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/plusone.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })(); </script>
-	</div>
-</div>
-<div class="copy">
-	<strong>© 2012 TRAVELOG</strong>
-</div>
