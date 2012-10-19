@@ -14,7 +14,8 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://web.merrymarry.me/';
+$prefix = (empty($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] !== 'on') ? "https" : "https";
+$config['base_url']	= $prefix . '://web.merrymarry.me/';
 
 /*
 |--------------------------------------------------------------------------

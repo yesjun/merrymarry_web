@@ -65,11 +65,13 @@
 						</div>
 						<!-- div.txt_box 끝 -->
 					</div>
+					<?php if (!empty($invite_rsvp_url)): ?>
 					<div class="rsvp">
 						<img src="<?php echo base_url(); ?>assets/images/rsvp/rsvp_bg.png" />
-						<p><a href="" class="yes_bu"><img src="<?php echo base_url(); ?>assets/images/rsvp/yes_bu.png" /></a></p>
-						<p><a href="" class="no_bu"><img src="<?php echo base_url(); ?>assets/images/rsvp/no_bu.png" /></a></p>
+						<p><a href="<?php echo base_url(); ?><?php echo $invite_rsvp_url; ?>&status=1" class="yes_bu"><img src="<?php echo base_url(); ?>assets/images/rsvp/yes_bu.png" /></a></p>
+						<p><a href="<?php echo $invite_rsvp_accept; ?>" class="no_bu"><img src="<?php echo base_url(); ?>assets/images/rsvp/no_bu.png" /></a></p>
 					</div>
+					<?php endif; ?>
 					<!-- map -->
 					<div class="map_box">
 						<div class="pin_bg"></div>

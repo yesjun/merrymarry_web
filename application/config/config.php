@@ -14,7 +14,8 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://nixiepoint.com/merrymarry_web/';
+$prefix = (empty($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] !== 'on') ? "http" : "http";
+$config['base_url']	= $prefix . '://nixiepoint.com/merrymarry_web/';
 
 /*
 |--------------------------------------------------------------------------
